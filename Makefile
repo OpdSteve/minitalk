@@ -1,16 +1,16 @@
-SERVER	= servidor
-CLIENT	= cliente
+SERVER	= server
+CLIENT	= client
 
 NAME	= minitalk.a
 
-SERVER_SRC	= servidor.c
-CLIENT_SRC	= cliente.c
+SERVER_SRC	= server.c
+CLIENT_SRC	= client.c
 
 OBJS_SERVER	= ${SERVER_SRC:.c=.o}
 OBJS_CLIENT	= ${CLIENT_SRC:.c=.o}
 
-#SERVER_SRC_BONUS	= servidor_bonus.c
-#CLIENT_SRC_BONUS	= cliente_bonus.c
+#SERVER_SRC_BONUS	= server_bonus.c
+#CLIENT_SRC_BONUS	= client_bonus.c
 
 #OBJS_SERVER_BONUS = ${SERVER_SRC_BONUS:.c=.o}
 #OBJS_CLIENT_BONUS = ${CLIENT_SRC_BONUS:.c=.o}
