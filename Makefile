@@ -39,8 +39,8 @@ clean:
 	$(RM) $(OBJS_SERVER)
 	$(RM) $(OBJS_CLIENT)
 	make clean -C ./libft
-	$(RM) $(OBJS_SERVER_BONUS)
-	$(RM) $(OBJS_CLIENT_BONUS)
+#$(RM) $(OBJS_SERVER_BONUS)
+#$(RM) $(OBJS_CLIENT_BONUS)
 	
 fclean: clean
 	$(RM) $(SERVER)
@@ -49,8 +49,8 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(LIBFT) $(OBJS_SERVER_BONUS) $(OBJS_CLIENT_BONUS)
-	$(CC) $(CFLAGS) $(LIBFT) $(OBJS_CLIENT_BONUS) -o $(CLIENT)
-	$(CC) $(CFLAGS) $(LIBFT) $(OBJS_SERVER_BONUS) -o $(SERVER)
+#bonus: $(LIBFT) $(OBJS_SERVER_BONUS) #$(OBJS_CLIENT_BONUS)
+#	$(CC) $(CFLAGS) $(LIBFT) $(OBJS_CLIENT_BONUS) -o $(CLIENT)
+#	$(CC) $(CFLAGS) $(LIBFT) $(OBJS_SERVER_BONUS) -o $(SERVER)
 
 .PHONY: all, clean, fclean, re, bonus
