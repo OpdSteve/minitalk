@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
+/*   By: v4tior <v4tior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 21:00:27 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/03 16:17:51 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/09 12:02:38 by v4tior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_printconfig(const char *str, int i, va_list *ap)
 	{
 		x += ft_putstr("0x");
 		x += ft_saver(va_arg(*ap, unsigned int long));
-	}	
+	}
 	return (x);
 }
 

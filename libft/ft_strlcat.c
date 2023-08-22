@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go <eleon-go@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: v4tior <v4tior@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 17:39:44 by eleon-go          #+#    #+#             */
-/*   Updated: 2023/01/28 12:14:22 by eleon-go         ###   ########.fr       */
+/*   Updated: 2023/08/09 12:09:41 by v4tior           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	res;
 
 	s = (char *)src;
-		len_dst = ft_strlen(dst);
-		len_src = ft_strlen(s);
-		res = 0;
-		i = 0;
+	len_dst = ft_strlen(dst);
+	len_src = ft_strlen(s);
+	res = 0;
+	i = 0;
 	if (dstsize > len_dst)
 		res = len_src + len_dst;
 	else
