@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
+/*   By: eleon-go <eleon-go@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:41:36 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/23 13:28:27 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/23 22:57:45 by eleon-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "minitalk.h"
 
 /* This will be used fot broke the string in part of 8 bits, send the bit and
-continue for the next 8 bits. */
+continue for the next 8 bits & print the letter when complete 8 bits. */
 void	ft_signaller(int signal)
 {
 	static char	character;
@@ -31,6 +31,8 @@ void	ft_signaller(int signal)
 	}
 }
 
+/* Get the PID of the proccess and print the PID. And wait por a signal for
+*this PID proccess*/
 int	main(void)
 {
 	int	pid;
