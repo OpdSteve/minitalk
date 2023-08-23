@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
+/*   By: eleon-go <eleon-go@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:11:45 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/23 15:17:07 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/23 23:18:34 by eleon-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "minitalk.h"
+
 
 static void	ft_signal_back(int signal)
 {
@@ -21,6 +22,11 @@ static void	ft_signal_back(int signal)
 		ft_printf("");
 }
 
+/*Use the PID proccess and a signal for send the string in form of bits.Then
+use SIGNUR2 to send 1 and 0, use Kill to send the bit for SIGNUR2. If is 
+diferent,send the signal in SIGNUR1 and wait 100 ms during the proccess to 
+not crash 1 letter of the string use 8 bits, when send 8 bits, use str++ to 
+continue for the string until the end*/
 static void	ft_send_bit(int pid, char *str)
 {
 	int		bit;
