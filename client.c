@@ -3,16 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
+/*   By: eleon-go <eleon-go@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:40:56 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/23 15:44:33 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/23 23:11:30 by eleon-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "minitalk.h"
 
+/*Use the PID proccess and a signal for send the string in form of bits. Then
+*use SIGNUR2 to send 1, use Kill to send the bit for SIGNUR. If is diferent,
+*send the signal in SIGNUR1 and wait 100 ms during the proccess to not crash
+*1 letter of the string use 8 bits, when send 8 bits, use str++ to continue
+*for the string until the end*/
 static void	ft_send_bit(int pid, char *str)
 {
 	int		bit;
@@ -34,6 +39,11 @@ static void	ft_send_bit(int pid, char *str)
 	}
 }
 
+/*This main use two argument, the first is the PID number proccess, this use
+*atoi to brake the PID and use it. The second argument is the text that we
+*would like to send, that is the second string. If you trie to use the client
+*with out the correct order, the program send a error mensage and close.
+*If all are OK, use the send_bit for send the signal to the server funtions*/
 int	main(int argc, char **argv)
 {
 	int		pid;
