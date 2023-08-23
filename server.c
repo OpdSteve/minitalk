@@ -6,13 +6,15 @@
 /*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:41:36 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/22 14:48:50 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/23 13:28:27 by eleon-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "minitalk.h"
 
+/* This will be used fot broke the string in part of 8 bits, send the bit and
+continue for the next 8 bits. */
 void	ft_signaller(int signal)
 {
 	static char	character;
