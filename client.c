@@ -6,7 +6,7 @@
 /*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:40:56 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/22 14:48:17 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/23 15:44:33 by eleon-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_printf("Wrong number of arguments. Need ./client <PID> <Message>\n");
+		ft_printf("Put all things in order: ./client <PID> <Message>\n");
 		exit(EXIT_FAILURE);
 	}
 	else
