@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go <eleon-go@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:11:45 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/24 10:36:52 by eleon-go         ###   ########.fr       */
+/*   Updated: 2023/08/24 13:27:23 by eleon-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,15 @@ static void	ft_signal_back(int signal)
 static void	ft_send_bit(int pid, char *str)
 {
 	int		bit;
-	char	character;
+	char	letter;
 
 	while (*str)
 	{
 		bit = 8;
-		character = *str;
+		letter = *str;
 		while (bit--)
 		{
-			if (character >> bit & 1)
+			if (letter >> bit & 1)
 				kill (pid, SIGUSR2);
 			else
 				kill(pid, SIGUSR1);

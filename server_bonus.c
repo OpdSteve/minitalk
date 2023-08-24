@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go <eleon-go@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:12:13 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/24 10:47:47 by eleon-go         ###   ########.fr       */
+/*   Updated: 2023/08/24 13:25:53 by eleon-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,18 @@ structure. Signal is SIGUSR2 (0/1) siginfo use for signations structure
 and void *context is literally nathing, i don,t need to use*/
 static void	ft_signaller(int signal, siginfo_t *info, void *context)
 {
-	static char	caracter;
+	static char	letter;
 	static int	bit;
 
 	(void) context;
 	if (signal == SIGUSR2)
-		caracter = caracter | (1 << (7 - bit));
+		letter = letter | (1 << (7 - bit));
 	bit++;
 	if (bit == 8)
 	{
-		ft_printf("%c", (caracter));
+		ft_printf("%c", (letter));
 		bit = 0;
-		caracter = 0;
+		letter = 0;
 		kill(info->si_pid, SIGUSR1);
 	}
 }
