@@ -6,7 +6,7 @@
 /*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:12:13 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/24 13:25:53 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/24 13:37:17 by eleon-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,10 @@ static void	ft_signaller(int signal, siginfo_t *info, void *context)
 	}
 }
 
+/* Get the PID of the proccess and print the PID. And wait por a signal for
+*this PID proccess to send 0 or 1 to signation. Then, i use the sa_signation
+*to say the what are going to be the principal funtion. sa_mask is for 
+*make a queue and sa_flags to save the info*/
 int	main(void)
 {
 	int					pid;

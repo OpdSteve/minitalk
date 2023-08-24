@@ -6,7 +6,7 @@
 /*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 16:41:36 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/24 13:26:36 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/24 13:33:56 by eleon-go@st      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_signaller(int signal)
 }
 
 /* Get the PID of the proccess and print the PID. And wait por a signal for
-*this PID proccess to send 0 or 1 to signaller*/
+*this PID proccess to send 0 or 1 to signal*/
 int	main(void)
 {
 	int	pid;
