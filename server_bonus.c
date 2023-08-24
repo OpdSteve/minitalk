@@ -3,16 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eleon-go@student.42malaga.co <eleon-go>    +#+  +:+       +#+        */
+/*   By: eleon-go <eleon-go@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 13:12:13 by eleon-go@st       #+#    #+#             */
-/*   Updated: 2023/08/23 14:30:29 by eleon-go@st      ###   ########.fr       */
+/*   Updated: 2023/08/24 10:47:47 by eleon-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft/libft.h"
 #include "minitalk.h"
 
+/* This will be used fot broke the character in part of 8 bits, send the bit and
+*continue for the next 8 bits & print the letter when complete 8 bits.
+*This is a little diferent than the normal server, because use signation
+structure. Signal is SIGUSR2 (0/1) siginfo use for signations structure
+and void *context is literally nathing, i don,t need to use*/
 static void	ft_signaller(int signal, siginfo_t *info, void *context)
 {
 	static char	caracter;
